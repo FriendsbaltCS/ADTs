@@ -1,6 +1,6 @@
 # Coding Assignment: Abstract Data Types
 
-This project implements four fundamental abstract data types (ADTs): Stack, Queue, OrderedList, and UnorderedList. Each ADT is defined in its respective Python file, and corresponding test cases are provided to ensure functionality.
+This assignment implements four fundamental abstract data types (ADTs): Stack, Queue, OrderedList, and UnorderedList. Each ADT is defined in its respective Python file, and corresponding test cases are provided to ensure functionality.
 
 ## Project Structure
 
@@ -35,33 +35,37 @@ The Queue ADT follows the First In First Out (FIFO) principle. It includes the f
 - `front()`: Returns the item at the front of the queue without removing it.
 - `is_empty()`: Checks if the queue is empty.
 
-### List
 
-The List ADT provides a dynamic array-like structure. It includes the following methods:
-- `append(item)`: Adds an item to the end of the list.
+### OrderedList
+
+The OrderedList ADT provides a dynamic array-like structure where elements are maintained in a sorted order. It includes the following methods:
+- `add(item)`: Adds an item to the list while maintaining order.
 - `remove(item)`: Removes the first occurrence of an item from the list.
-- `get(index)`: Returns the item at the specified index.
+- `search(item)`: Searches for an item in the list.
+- `is_empty()`: Checks if the list is empty.
 - `size()`: Returns the number of items in the list.
+- `index(item)`: Returns the index of the item in the list.
+- `pop()`: Removes and returns the last item in the list.
+- `pop(pos)`: Removes and returns the item at the specified position.
 
-## Running Tests
+### UnorderedList
 
-To run the tests for this project, ensure you have `pytest` installed. You can install it using pip:
+The UnorderedList ADT provides a dynamic array-like structure. It includes the following methods:
+- `add(item)`: Adds an item to the list.
+- `remove(item)`: Removes the first occurrence of an item from the list.
+- `search(item)`: Searches for an item in the list.
+- `is_empty()`: Checks if the list is empty.
+- `size()`: Returns the number of items in the list.
+- `append(item)`: Adds an item to the end of the list.
+- `index(item)`: Returns the index of the item in the list.
+- `insert(pos, item)`: Inserts an item at the specified position.
+- `pop()`: Removes and returns the last item in the list.
+- `pop(pos)`: Removes and returns the item at the specified position.
 
-```
-pip install pytest
-```
-
-Once installed, navigate to the project directory and run the following command:
-
-```
-pytest tests/
-```
-
-This will execute all the test cases and report any failures or errors.
 
 ## Implementation Instructions
 
-1. Implement the `Stack`, `Queue`, and `List` classes in their respective files located in the `src` directory.
+1. Implement the `Stack`, `Queue`, and both list classes in their respective files located in the `src` directory.
 2. Write test cases for each method in the corresponding test files located in the `tests` directory.
 3. Ensure all tests pass before submission.
 
